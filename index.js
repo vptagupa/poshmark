@@ -47,10 +47,10 @@ function responseData(data) {
 }
 
 function writeJsonFile(data) {
-    const jsonString = JSON.stringify(data);
+    const jsonData = JSON.stringify({ data });
     const filePath = "data.json";
 
-    fs.writeFile(filePath, jsonString, "utf8", (err) => {
+    fs.writeFile(filePath, jsonData, "utf8", (err) => {
         if (err) {
             console.error("Error writing to the file:", err);
         } else {
